@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Login from './pages/Login.jsx'
 import Main from './pages/Main.jsx'
@@ -16,7 +17,7 @@ function ProtectedRoute({ children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/UNPLAN">
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />

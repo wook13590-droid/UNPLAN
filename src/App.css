@@ -433,15 +433,23 @@ main { flex: 1; }
   .account-menu button, .account-menu a { min-height: 40px; padding-inline: 8px; gap: 6px; font-size: 11px; }
   .account-menu button span { font-size: 15px; }
   .account-content { padding-top: 30px; gap: 24px; }
-  .account-trip-card { grid-template-columns: minmax(110px, 34%) minmax(0, 1fr) 56px 56px; gap: 8px; padding: 8px; }
-  .account-trip-info h1 { font-size: 11px; word-break: keep-all; }
-  .account-trip-info p { font-size: 8px; white-space: normal; line-height: 1.4; }
+  .account-trip-card { grid-template-columns: 92px minmax(0, 1fr); grid-template-rows: auto auto; gap: 8px 10px; padding: 10px; }
+  .account-trip-card > img { grid-column: 1; grid-row: 1 / 3; height: 72px; align-self: center; }
+  .account-trip-info { grid-column: 2; grid-row: 1; align-self: end; }
+  .account-trip-info h1 { margin-bottom: 4px; font-size: 13px; word-break: keep-all; }
+  .account-trip-info p { font-size: 10px; white-space: normal; line-height: 1.4; }
+  .account-view-button { grid-column: 2; grid-row: 2; width: calc(50% - 4px); justify-self: start; }
+  .account-delete-button { grid-column: 2; grid-row: 2; width: calc(50% - 4px); justify-self: end; }
   .account-view-button, .account-delete-button { min-height: 30px; font-size: 11px; }
   .account-favorites-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .saved-place-row { grid-template-columns: minmax(90px, 28%) minmax(0, 1fr) 68px 52px; gap: 6px; padding: 7px; }
-  .saved-place-info h1 { font-size: 12px; }
+  .saved-place-row { grid-template-columns: 92px minmax(0, 1fr); grid-template-rows: auto auto; gap: 8px 10px; padding: 10px; }
+  .saved-place-row > img { grid-column: 1; grid-row: 1 / 3; height: 72px; align-self: center; }
+  .saved-place-info { grid-column: 2; grid-row: 1; min-width: 0; align-self: end; }
+  .saved-place-info h1 { margin-bottom: 4px; font-size: 14px; }
+  .saved-place-info p { display: -webkit-box; overflow: hidden; margin: 4px 0 0; font-size: 10px; line-height: 1.4; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
   .saved-place-category { padding: 2px 6px; font-size: 10px; }
-  .saved-place-info p { font-size: 8px; }
+  .saved-place-row .account-view-button { grid-column: 2; grid-row: 2; width: calc(58% - 4px); justify-self: start; white-space: nowrap; }
+  .saved-place-row .account-delete-button { grid-column: 2; grid-row: 2; width: calc(42% - 4px); justify-self: end; white-space: nowrap; }
 }
 @media (max-width: 480px) {
   .account-main { display: flex; flex-direction: column; }
@@ -451,11 +459,12 @@ main { flex: 1; }
   .account-menu { margin: 0; gap: 6px; }
   .account-menu button, .account-menu a { min-height: 34px; padding-inline: 5px; gap: 3px; font-size: 10px; }
   .account-content { padding: 8px 0; gap: 14px; }
-  .account-trip-card { grid-template-columns: 92px minmax(0, 1fr) 48px 48px; gap: 6px; }
-  .account-trip-info h1 { font-size: 10px; word-break: keep-all; }
-  .account-trip-info p { font-size: 7px; }
+  .account-trip-card { grid-template-columns: 92px minmax(0, 1fr); gap: 8px 10px; }
+  .account-trip-info h1 { font-size: 13px; }
+  .account-trip-info p { font-size: 10px; }
   .account-view-button, .account-delete-button { min-height: 28px; font-size: 10px; }
   .account-favorite-card h2 { font-size: 13px; }
-  .saved-place-row { grid-template-columns: 70px minmax(0, 1fr) 52px 42px; }
-  .saved-place-row .account-view-button, .saved-place-row .account-delete-button { font-size: 9px; }
+  .saved-place-row { grid-template-columns: 82px minmax(0, 1fr); gap: 8px 10px; }
+  .saved-place-row > img { height: 66px; }
+  .saved-place-row .account-view-button, .saved-place-row .account-delete-button { min-height: 30px; font-size: 10px; }
 }
